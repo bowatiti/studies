@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><u>Bubble sort Algorithm</u></h1>
+    <h3>Ascending order</h3>
+    <ol>
+        <li>Define a function for sorting with one parameter</li>
+        <li>Get the length of the array used as limitation</li>
+        <li>Compare 2 element from the beginning of the array</li>
+        <li>Whenever the second element is greater than the first, swap them</li>
+        <li>Compare the next pair of elements and repeat step 4</li>
+        <li>Repeat step 3 to 5 until the array is sorted</li>
+    </ol>
+    <p>End</p>
+</body>
+<script>
+    function bubbleSort(array) {
+    const arrayLength = array.length;
+    let isSwapped;
+    let n=1;
+
+    for (let i = 0; i < arrayLength; i++) {
+        isSwapped = false;
+
+        for (let j = 0; j < arrayLength - i - 1; j++) {
+            if (array[j] > array[j + 1]) {
+                // Swap elements
+                [array[j], array[j + 1]] = [array[j + 1], array[j]];
+                isSwapped = true;
+            }
+            console.log(n++);
+            
+            console.log(array);
+        }
+
+        // If no two elements were swapped in the inner loop, array is sorted
+        if (!isSwapped) 
+            break;
+    }
+
+    return array;
+}
+
+// Test the function
+const sortedArray = bubbleSort([45, 23, 3, 5346, 5, 356, 243, 35]);
+console.log("Sorted Array:");
+console.log(sortedArray);
+
+</script>
+</html>
