@@ -20,7 +20,13 @@
 
 let a = 48
 let b = 18
-let temp = 0
+pgcd(a,b)
+let mult = multiple(a)
+console.log("Multiples of "+a+" are : "+mult)
+let div = diviseur(a)
+console.log("Les diviseur de "+a+" sont : "+div)
+function pgcd(a,b){
+    let temp = 0
 let arr1 = []
 let arr2 = []
 
@@ -51,7 +57,35 @@ for(i=0; i< arr1.length ; i++){
     }
 }
 
-console.log(arr1)
-console.log(arr2)
+// console.log(arr1)
+// console.log(arr2)
 
 console.log("The PGCD of "+a+" and "+b+" is "+temp)
+
+}
+
+function diviseur(x){
+    let i = 1
+    let arr = []
+while (x >= i){
+    
+    if(x % i === 0){
+        
+        arr.push(i)       
+        
+    }
+    i++
+}
+
+return arr.reverse()
+
+}
+
+function multiple(x){
+    let arr = []
+    for(var i = 1; i <= 10; i++){
+        arr[i-1] = x * i
+    }
+
+    return arr
+}
