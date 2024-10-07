@@ -24,7 +24,7 @@ pgcd(a,b)
 let mult = multiple(a)
 console.log("Multiples of "+a+" are : "+mult)
 let div = diviseur(a)
-console.log("Les diviseur de "+a+" sont : "+div)
+console.log("Les diviseurs de "+a+" sont : "+div)
 function pgcd(a,b){
     let temp = 0
 let arr1 = []

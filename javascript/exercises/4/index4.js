@@ -107,11 +107,21 @@ function binary(dec){
 
 console.log("Find the time in a text")
 const theText = "Breakfast at 09:00 in the room 123:456"
-splitTheText = theText.split()
-for(i = 0; i<splitTheText.length-5; i++){
-    for(j = i; j< i+5; j++){
-        
+splitTheText = theText.split("")
+console.log(splitTheText)
+for(i = 0; i<splitTheText.length; i++){
+    if(splitTheText[i] === ':'){
+        if(Number.isInteger(Number(splitTheText[i-1])) || Number.isInteger(Number(splitTheText[i-2])) || Number.isInteger(Number(splitTheText[i+1])) || Number.isInteger(Number(splitTheText[i+2]))){
+            if(splitTheText[i-3] ===' ' || splitTheText[i+3] === ' ')
+            console.log("The time is : "+splitTheText[i-2]+splitTheText[i-1]+splitTheText[i]+splitTheText[i+1]+splitTheText[i+2])
+        }
     }
-
+    
+        // if(Number.isInteger(Number(splitTheText[i])) || Number.isInteger(Number(splitTheText[i+1]))){
+        //     console.log("yes"+i)
+        // }
+        // else
+        // console.log("no"+i)
+    
 }
 
